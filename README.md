@@ -74,6 +74,9 @@ An annotated exemplar of the SQL formatting standard used throughout this reposi
 element-per-line construction, leading commas, vertical alignment of like elements, CTEs over
 nested subqueries. The point is maintainability — code written to be inherited.
 
+`CodeFormatter.py` — a Notepad++ Python plugin that tokenizes SQL and M and applies this
+standard automatically; the exemplar describes the rules, the formatter enforces them.
+
 ---
 
 *Assembled August 2026. The add-in and library are in active use; questions and walkthrough
