@@ -5,12 +5,12 @@ Louisville, KY · [linkedin.com/in/lytledavidsmith](https://linkedin.com/in/lytl
 
 Everything here is my own work: personal tools built on my own time, or utilities built on
 public CMS data. No employer code or data appears in this repository. All code follows a
-written formatting standard I maintain (see `Example_Code_by_Lytle_David_Smith.sql` for the
+written formatting standard I maintain (see `Example Code by Lytle David Smith.sql` for the
 annotated version) — when you inherit my work, it all reads the same.
 
 ---
 
-## LDS+N — Excel add-in (`lds-n/`)
+## LDS+N — Excel add-in (`LDS_N_Source.txt`)
 
 **What it is:** A 5,000+ line VBA add-in (22 modules) that streamlines working with the wide
 tables Power Query delivers into Excel.
@@ -31,7 +31,7 @@ the same tables after every refresh and scrolling sideways to read one row.
   an application-level event sentinel driving the modeless viewer, DPI-aware programmatic
   form generation, and ribbon integration.
 
-## Power Query (M) function library (`power-query-m/`)
+## Power Query (M) function library (`fn*.m`)
 
 **What it is:** Reusable M functions that speed development of reporting solutions.
 
@@ -48,27 +48,27 @@ different employers' database engines.
 - `fnUnzipContents` — parses ZIP file binary structure in pure M (no external tools).
 - `fnAddGroupIndexColumn`, `fnStack`, `fnSQL_Indent`, and other development utilities.
 
-## SQL Server search utilities (`sql-utilities/`)
+## SQL Server search utilities
 
 **What they are:** Two SSMS template-parameter scripts for finding things in unfamiliar
 databases — the first job on every new engagement.
 
-- `Search_Database.sql` — searches schema, table, view, synonym, column, and module names,
+- `Search Database.sql` — searches schema, table, view, synonym, column, and module names,
   and module source code, in one pass (Azure SQL compatible).
-- `Search_Table_Data.sql` — searches for a *value* across specified columns and tables
+- `Search Table Data.sql` — searches for a *value* across specified columns and tables
   (adapted from a public query by Reto Egeter, credited in the header).
 
-## NPPES pipeline (`nppes-pipeline/`)
+## NPPES pipeline
 
 **What it is:** Databricks notebooks that download the current NPPES provider file from the
 public CMS site, extract and load it, and build normalized dimension views — plus an Excel
-workbook (`CMS_NPPES_API_Example.xlsx`) demonstrating the NPPES API called live from
+workbook (`CMS NPPES API Example.xlsx`) demonstrating the NPPES API called live from
 Power Query.
 
 **Why it's here:** Acquisition → extraction → loading → normalized presentation of a healthcare
 data source, end to end. NPPES is public data, so the full pipeline can be shown and run.
 
-## Code standard (`Example_Code_by_Lytle_David_Smith.sql`)
+## Code standard (`Example Code by Lytle David Smith.sql`)
 
 An annotated exemplar of the SQL formatting standard used throughout this repository:
 element-per-line construction, leading commas, vertical alignment of like elements, CTEs over
