@@ -10,7 +10,13 @@ annotated version) — when you inherit my work, it all reads the same.
 
 ---
 
-## LDS+N — Excel add-in (`LDS_N_Source.txt`)
+## LDS+N — Excel add-in
+
+**Start here: [LDS+N Quick Tour.pdf](LDS%2BN%20Quick%20Tour.pdf)** — an illustrated
+walkthrough of the add-in in action, written for any reader, technical or not.
+`LDS+N Sample Data.xlsx` is the workbook used throughout the tour, so every step can be
+reproduced, and `LDS+N.xlam` is the compiled add-in itself for hands-on evaluation
+(after downloading, right-click → Properties → Unblock before opening).
 
 **What it is:** A 5,000+ line VBA add-in (22 modules) that streamlines working with the wide
 tables Power Query delivers into Excel.
