@@ -13,12 +13,12 @@ annotated version) — when you inherit my work, it all reads the same.
 ## LDS+N — Excel add-in
 
 **Start here: [LDS+N Quick Tour.pdf](LDS%2BN%20Quick%20Tour.pdf)** — an illustrated
-walkthrough of the add-in in action, written for any reader, technical or not.
-`LDS+N Sample Data.xlsx` is the workbook used throughout the tour, so every step can be
-reproduced, and `LDS+N.xlam` is the compiled add-in itself for hands-on evaluation
-(after downloading, right-click → Properties → Unblock before opening).
+reference covering every feature, group by group, keyboard shortcuts included. The
+screenshots use `LDS+N Sample Data.xlsx`, included here so everything shown can be tried
+hands-on, and `LDS+N.xlam` is the compiled add-in itself for evaluation (after
+downloading, right-click → Properties → Unblock before opening).
 
-**What it is:** A 5,000+ line VBA add-in (22 modules) that streamlines working with the wide
+**What it is:** A 6,000+ line VBA add-in (24 modules) that streamlines working with the wide
 tables Power Query delivers into Excel.
 
 **The problem it solves:** Power Query hands you correct data in an unreadable state — dozens
@@ -33,13 +33,21 @@ the same tables after every refresh and scrolling sideways to read one row.
 - *Formula Report* — audits an entire workbook's formulas, external references, and errors
   into one table, collapsing filled ranges into single canonical findings. Built for assessing
   inherited reporting workbooks.
+- *Power Query Export / Import / Delete* — moves a workbook's queries as one text file in
+  Excel's own section-document form, so a query set built once can travel to every workbook
+  that needs it. The import also accepts bare Advanced-Editor expressions — the `fn*.pq`
+  library below loads directly through it.
 - For the technically inclined: class-based selection history (browser-style back/forward),
   an application-level event sentinel driving the modeless viewer, DPI-aware programmatic
-  form generation, and ribbon integration.
+  form generation, ribbon integration, and a self-hosting source system — the add-in exports
+  and re-imports any open workbook's VBA, its own included, as one annotated text file,
+  through the VBE extensibility model.
 
-## Power Query (M) function library (`fn*.m`)
+## Power Query (M) function library (`fn*.pq`)
 
-**What it is:** Reusable M functions that speed development of reporting solutions.
+**What it is:** Reusable M functions that speed development of reporting solutions. Each file
+is a bare M expression as the Advanced Editor shows it, so the functions can be pasted in by
+hand or imported as-is through the add-in's Import Queries button.
 
 **The problem it solves:** Power Query connects to server data read-only — you can pull data
 down, but you can't push a local filter list up. `fnSQLSelectFromValues` generates type-aware
@@ -85,8 +93,8 @@ standard automatically; the exemplar describes the rules, the formatter enforces
 
 ---
 
-*Assembled August 2026. The add-in and library are in active use; questions and walkthrough
-requests welcome.*
+*Assembled August 2026; last updated October 2026. The add-in and library are in active use;
+questions and walkthrough requests welcome.*
 
 © Lytle David Smith. Shared for professional review; all rights reserved.
 No license is granted for reuse or redistribution — contact me if you'd like to use something here.
