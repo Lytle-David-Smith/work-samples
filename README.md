@@ -12,7 +12,7 @@ annotated version) — when you inherit my work, it all reads the same.
 
 ## LDS+N — Excel add-in
 
-**Start here: [LDS+N Quick Tour.pdf](LDS%2BN%20Quick%20Tour.pdf)** — an illustrated
+**Start here: [LDS+N Reference.pdf](LDS%2BN%20Reference.pdf)** — an illustrated
 reference covering every feature, group by group, keyboard shortcuts included. The
 screenshots use `LDS+N Sample Data.xlsx`, included here so everything shown can be tried
 hands-on, and `LDS+N.xlam` is the compiled add-in itself for evaluation (after
@@ -37,11 +37,13 @@ the same tables after every refresh and scrolling sideways to read one row.
   Excel's own section-document form, so a query set built once can travel to every workbook
   that needs it. The import also accepts bare Advanced-Editor expressions — the `fn*.pq`
   library below loads directly through it.
+- *Export / Import Source* — round-trips any open workbook's entire VBA project through
+  one annotated, self-documenting text file: every module exported for review, comparison,
+  or revision in plain text, then re-imported in place without touching form designers.
+  Built on the VBE extensibility model, and used to maintain this add-in itself.
 - For the technically inclined: class-based selection history (browser-style back/forward),
   an application-level event sentinel driving the modeless viewer, DPI-aware programmatic
-  form generation, ribbon integration, and a self-hosting source system — the add-in exports
-  and re-imports any open workbook's VBA, its own included, as one annotated text file,
-  through the VBE extensibility model.
+  form generation, and ribbon integration.
 
 ## Power Query (M) function library (`fn*.pq`)
 
@@ -94,7 +96,7 @@ standard automatically; the exemplar describes the rules, the formatter enforces
 ---
 
 *Assembled August 2026; last updated October 2026. The add-in and library are in active use;
-questions and walkthrough requests welcome.*
+questions and demo requests welcome.*
 
 © Lytle David Smith. Shared for professional review; all rights reserved.
 No license is granted for reuse or redistribution — contact me if you'd like to use something here.
